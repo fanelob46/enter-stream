@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage';
 import MainLayout from './Layaouts/MainLayout';
 import MoviesPage from './Pages/MoviesPage';
 import NotFoundPage from './Pages/NotFoundPage';
+import Moviepage from './Pages/Moviepage';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -12,6 +13,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<MainLayout/>} >
             <Route index element={<HomePage/>}/>
             <Route path='/movies' element={<MoviesPage/>}/>
+            <Route path='/movies/:id' element={<Moviepage/>} />
             <Route path='*' element={<NotFoundPage/>}/>
 
     </Route>
