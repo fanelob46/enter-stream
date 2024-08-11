@@ -1,0 +1,53 @@
+
+
+{
+    "Movies": [
+        {
+            "id": "1",
+            "Image": "../src/assets/Avengers.jpeg",
+            "Description": "This is a marvel Avengers movie",
+            "Country" : "South Africa",
+            "Year" : "2019"
+        },
+        {
+            "id": "2",
+            "Image": "../src/assets/joker.png",
+            "Description": "This is a joker movie",
+            "Country" : "Italy",
+            "Year" : "2016"
+        },
+        {
+            "id": "3",
+            "Image": "../src/assets/death.png",
+            "Description": "This is a joker movie",
+            "Country" : "Italy",
+            "Year" : "2016"
+        },
+        {
+            "id": "4",
+            "Image": "../src/assets/hiddenlife.png",
+            "Description": "This is a joker movie",
+            "Country" : "Italy",
+            "Year" : "2016"
+        },{
+            "id": "5",
+            "Image": "../src/assets/johnwick.png",
+            "Description": "This is a joker movie",
+            "Country" : "Italy",
+            "Year" : "2016"
+        },{
+            "id": "6",
+            "Image": "../src/assets/nightingale.png",
+            "Description": "This is a joker movie",
+            "Country" : "Italy",
+            "Year" : "2016"
+        },{
+            "id": "7",
+            "Image": "../src/assets/wonderwoman.png",
+            "Description": "This is a joker movie",
+            "Country" : "Italy",
+            "Year" : "2016"
+        }
+    ]
+   
+}
