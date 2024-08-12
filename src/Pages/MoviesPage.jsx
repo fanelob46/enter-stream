@@ -7,7 +7,7 @@ const MoviesPage = () => {
     <>
     
 <section>
-    <Link to='/addMovie' className='text-white rounded-full bg-blue-400 pr-3 pl-3'>
+    <Link to='/Add-movie' className='text-white rounded-full bg-blue-400 pr-3 pl-3'>
         Add
     </Link>
     <div className='px-4 py-6'>
