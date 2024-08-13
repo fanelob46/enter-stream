@@ -1,47 +1,40 @@
 import React from 'react'
-import { useRef,useState } from 'react'
-import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'
+import { useParams, useLoaderData, useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
-const AddMoviesPage = ({AddMovieSubmit}) => {
+const EditMoviePage = ({updateMovieSubmit}) => {
 
-   const [image, setImage] = useState('');
-   const [description, setDescription] = useState('');
-   const [country, setCountry] = useState('');
-   const [year, setYear] = useState('');
-   const [file, setFile] = useState();
+    const movie = useLoaderData();
+    onst [image, setImage] = useState(movie.image);
+   const [description, setDescription] = useState(movie.description);
+   const [country, setCountry] = useState(movie.country);
+   const [year, setYear] = useState(movie.year);
 
-
-   const navigate = useNavigate()
-
-   const fileRef = useRef();
-   const onChangeFile = async (e) => {
-    if(e.target.files && e.target.files[0]){
-      const updatedJSON = e.target.files[0];
-      console.log(updatedJSON);
-    }
-   };
-   
+   const navigate = useNavigate();
+   const {id} = useParams();
 
    const submitForm = (e) => {
+     
     e.preventDefault();
 
-    const newMovie ={
+    const updatedMovie = {
+        id,
         image,
         description,
         country,
         year
     }
 
-    AddMovieSubmit(newMovie)
+    updateMovieSubmit(updatedMovie)
 
     toast.success('Movie added succesfully');
 
-    return navigate('/movies')
+    return navigate(`/Movies/${id}`)
+    
+
    }
 
-   
-    
   return (
     <section className='bg-white'>
         
@@ -150,7 +143,7 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
               className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline'
               type='submit'
             >
-              SAVE
+              Update Movie
             </button>
           </div>
         </form>
@@ -160,4 +153,4 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
   )
 }
 
-export default AddMoviesPage
+export default EditMoviePage
