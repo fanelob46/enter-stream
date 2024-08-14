@@ -1,57 +1,51 @@
-import React from 'react'
 import { useState } from 'react'
-import { useParams, useLoaderData, useNavigate } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import { useParams, useLoaderData, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const EditMoviePage = ({updateMovieSubmit}) => {
+ 
+  const movie = useLoaderData();
+  console.log(movie)
+  
+  const [image, setImage] = useState(movie.Image);
+   const [description, setDescription] = useState(movie.Description);
+   const [country, setCountry] = useState(movie.Country);
+   const [year, setYear] = useState(movie.Year);
+  
 
-    const movie = useLoaderData();
-    onst [image, setImage] = useState(movie.image);
-   const [description, setDescription] = useState(movie.description);
-   const [country, setCountry] = useState(movie.country);
-   const [year, setYear] = useState(movie.year);
+  const navigate = useNavigate();
+  const { id } = useParams();
 
-   const navigate = useNavigate();
-   const {id} = useParams();
-
-   const submitForm = (e) => {
-     
+  const submitForm = (e) => {
     e.preventDefault();
 
     const updatedMovie = {
-        id,
-        image,
-        description,
-        country,
-        year
-    }
+      id,
+      image,
+      description,
+      country,
+      year,
+      
+    };
 
-    updateMovieSubmit(updatedMovie)
+    updateMovieSubmit(updatedMovie);
 
-    toast.success('Movie added succesfully');
+    toast.success('Job Updated Successfully');
 
-    return navigate(`/Movies/${id}`)
-    
+    return navigate(`/Movies/${id}`);
+  };
 
-   }
 
+  
   return (
+
     <section className='bg-white'>
         
     <div className=' m-auto max-w-2xl py-24'>
       <div className=''>
         <form onSubmit={submitForm}>
         <div>
-        <div class="font-[sans-serif] max-w-md mx-auto">
-      <label class="text-base text-gray-500 font-semibold mb-2 block">Upload file</label>
-      <input type="file"
-        id='file'
-        class="w-full text-gray-400 font-semibold text-sm bg-white border file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-gray-200 file:text-gray-500 rounded"
-        ref={fileRef}
-        value={image}
-        onChange={onChangeFile} />
-      <p class="text-xs text-gray-400 mt-2">PNG, JPG SVG, WEBP, and GIF are Allowed.</p>
-    </div>
+       
         </div>
 
         { /*<div className='mb-4'>
@@ -143,13 +137,14 @@ const EditMoviePage = ({updateMovieSubmit}) => {
               className='bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline'
               type='submit'
             >
-              Update Movie
+              SAVE
             </button>
           </div>
         </form>
       </div>
     </div>
   </section>
+    
   )
 }
 

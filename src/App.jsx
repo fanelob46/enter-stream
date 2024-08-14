@@ -5,7 +5,7 @@ import HomePage from './Pages/HomePage';
 import MainLayout from './Layaouts/MainLayout';
 import MoviesPage from './Pages/MoviesPage';
 import NotFoundPage from './Pages/NotFoundPage';
-import Moviepage from './Pages/Moviepage';
+import Moviepage, { movieLoader } from './Pages/Moviepage';
 import AddMoviesPage from './Pages/AddMoviesPage';
 import EditMoviePage from './Pages/EditMoviePage';
 
@@ -32,7 +32,7 @@ function App() {
 
   //update movie
 
-  const updateMovie = async (movie) => {
+ const updateMovie = async (movie) => {
     const res = await fetch(`/api/Movies/${movie.id}`, {
       method: 'PUT',
       headers: {
@@ -48,14 +48,14 @@ function App() {
     
       <Route path='/' element={<MainLayout/>} >
               <Route index element={<HomePage/>}/>
-              <Route path='/movies' element={<MoviesPage/>}/>
+              <Route path='/movies' element={<MoviesPage/>} />
               <Route path='/Add-movie' element={<AddMoviesPage AddMovieSubmit={addMovie}/>}/>
               <Route
           path='/edit-movie/:id'
-          element={<EditMoviePage updateMovieSubmit={updateMovie} />}
+          element={<EditMoviePage updateMovieSubmit={updateMovie}/> }loader={movieLoader}
           
         />
-              <Route path='/movies/:id' element={<Moviepage deleteMovie={deleteMovie}/>} />
+              <Route path='/movies/:id' element={<Moviepage deleteMovie={deleteMovie}/>}loader={movieLoader} />
               
               <Route path='*' element={<NotFoundPage/>}/>
   

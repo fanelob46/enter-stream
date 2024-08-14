@@ -1,49 +1,30 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import {Link, useParams, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import Spinner from '../Componets/Spinner';
+import { useState, useEffect} from 'react'
+import { useParams, useLoaderData, useNavigate} from 'react-router-dom'
+import Spinner from '../Componets/Spinner'
+import { Link } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
-const Moviepage = ({deleteMovie}) => {
-const navigate = useNavigate();
+export const Moviepage = ({deleteMovie}) => {
+  const {id} = useParams();
+  const navigate = useNavigate();
+  const movie = useLoaderData();
+  console.log(movie);
 
-    const { id } = useParams();
-    const [movie, setMovie] = useState(null);
-    const [loading, setLoading] = useState(true);
-    useEffect(()=> {
-        const fetchMovies = async () => {
-          try {
-          const res = await fetch(`/api/Movies/${id}`);
-          const data = await res.json();
-          console.log(data);
-          setMovie(data);
-            
-          } catch (error) {
-            console.log('Error fetching data', error);
-            
-          } finally {
-            setLoading(false);
-          }
-          
-        }
-        fetchMovies();
-      }, [])
+  const onDeleteClick = (movieId) => {
+    const confirm = window.confirm('Are you sure you want to delete?')
 
-     const onDeleteClick = (movieId) => {
-         const confirm = window.confirm('Are you sure you want to delete?')
+    if(!confirm) return;
 
-         if(!confirm) return;
+    deleteMovie(movieId);
 
-         deleteMovie(movieId);
+    toast.success('Movie Deleted Succesfully');
+    
+   navigate('/movies')
+}
 
-         toast.success('Movie Deleted Succesfully');
-         
-        navigate('/movies')
-     }
-
-  return loading ? <Spinner/> : (
+  return (
     <>
-    <div className='grid grid-cols-2 gap-0 pt-5 pl-6'>
+       <div className='grid grid-cols-2 gap-0 pt-5 pl-6'>
       <div>
       <img src={movie.Image} className='w-[500px] h-[500px]'/>
 
@@ -51,7 +32,7 @@ const navigate = useNavigate();
 
       <div>
       <h1>{movie.Description}</h1>
-      <Link to='/Add-movie'>
+      <Link to={`/edit-movie/${movie.id}`}>
       <button   className='text-white rounded-full bg-blue-400 pr-3 pl-3'>
         Edit
     </button>
@@ -63,9 +44,12 @@ const navigate = useNavigate();
       </div>
     </div>
     </>
-    
   )
-  
 }
-export default Moviepage;
-
+const movieLoader = async ({ params }) => {
+  const res = await fetch(`/api/Movies/${params.id}`);
+  console.log(params.id);
+  const data = await res.json();
+  return data;
+};
+export { Moviepage as default, movieLoader };

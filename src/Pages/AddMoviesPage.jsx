@@ -15,12 +15,23 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
    const navigate = useNavigate()
 
    const fileRef = useRef();
-   const onChangeFile = async (e) => {
-    if(e.target.files && e.target.files[0]){
-      const updatedJSON = e.target.files[0];
-      console.log(updatedJSON);
+   const handleImageChange = (e) => {
+    const file = e.target.files[0];
+
+    if(file) {
+       const reader = new FileReader();
+       reader.onloadend = () => {
+          setImage(reader.result);
+
+
+          setImage(reader.result);
+
+       };
+
+       reader.readAsDataURL(file);
+
     }
-   };
+ }
    
 
    const submitForm = (e) => {
@@ -56,7 +67,8 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
         class="w-full text-gray-400 font-semibold text-sm bg-white border file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-gray-200 file:text-gray-500 rounded"
         ref={fileRef}
         value={image}
-        onChange={onChangeFile} />
+        onChange={handleImageChange} />
+        
       <p class="text-xs text-gray-400 mt-2">PNG, JPG SVG, WEBP, and GIF are Allowed.</p>
     </div>
         </div>

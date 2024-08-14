@@ -23,38 +23,38 @@
     },
     {
       "id": "4",
-      "Image": "../src/assets/hiddenlife.png",
-      "Description": "This is a joker movie",
-      "Country": "Italy",
-      "Year": "2016"
+      "image": "../src/assets/hiddenlife.png",
+      "description": "This is a joker movie fanelo baloyi",
+      "country": "Italy",
+      "year": "2016"
     },
     {
       "id": "5",
-      "Image": "../src/assets/johnwick.png",
-      "Description": "This is a joker movie",
-      "Country": "Italy",
-      "Year": "2016"
+      "image": "../src/assets/johnwick.png",
+      "description": "This is a tluani movie",
+      "country": "Italy",
+      "year": "2016"
     },
     {
-      "id": "fb4e",
-      "image": "C:\\fakepath\\johnwick.png",
-      "description": "sdsfdfs",
-      "country": "sdfsdf",
-      "year": "3300"
-    },
-    {
-      "id": "2e3b",
+      "id": "d2af",
       "image": "",
-      "description": "dsfsdf",
-      "country": "fanelo baloyi",
-      "year": "2003"
+      "description": "duncan movie",
+      "country": "venda",
+      "year": "2000"
     },
     {
-      "id": "5e24",
-      "image": "",
-      "description": "mfajajajaja",
-      "country": "South africa",
-      "year": "dada"
+      "id": "9914",
+      "image": "C:\\fakepath\\wonderwoman.png",
+      "description": "dunkiiidff",
+      "country": "ede",
+      "year": "eewrew"
+    },
+    {
+      "id": "bdf2",
+      "image": "C:\\fakepath\\us.png",
+      "description": "im a thulare",
+      "country": "sosha",
+      "year": "2000"
     }
   ]
 }
