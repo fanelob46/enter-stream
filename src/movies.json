@@ -1,60 +1,173 @@
 {
-  "Movies": [
-    {
-      "id": "1",
-      "Image": "../src/assets/Avengers.jpeg",
-      "Description": "This is a marvel Avengers movie",
-      "Country": "South Africa",
-      "Year": "2019"
-    },
-    {
-      "id": "2",
-      "Image": "../src/assets/joker.png",
-      "Description": "This is a joker movie",
-      "Country": "Italy",
-      "Year": "2016"
-    },
-    {
-      "id": "3",
-      "Image": "../src/assets/death.png",
-      "Description": "This is a joker movie",
-      "Country": "Italy",
-      "Year": "2016"
-    },
-    {
-      "id": "4",
-      "image": "../src/assets/hiddenlife.png",
-      "description": "This is a joker movie fanelo baloyi",
-      "country": "Italy",
-      "year": "2016"
-    },
-    {
-      "id": "5",
-      "image": "../src/assets/johnwick.png",
-      "description": "This is a tluani movie",
-      "country": "Italy",
-      "year": "2016"
-    },
-    {
-      "id": "d2af",
-      "image": "",
-      "description": "duncan movie",
-      "country": "venda",
-      "year": "2000"
-    },
-    {
-      "id": "9914",
-      "image": "C:\\fakepath\\wonderwoman.png",
-      "description": "dunkiiidff",
-      "country": "ede",
-      "year": "eewrew"
-    },
-    {
-      "id": "bdf2",
-      "image": "C:\\fakepath\\us.png",
-      "description": "im a thulare",
-      "country": "sosha",
-      "year": "2000"
-    }
-  ]
-}
+    "Movies": [
+      {
+        "id": "10",
+        "Title": "Avengers End-Game",
+        "Type": "Movies",
+        "Image": "../src/assets/Avengers.jpeg",
+        "Description": "This is a marvel Avengers movie",
+        "Country": "South Africa",
+        "Year": "2019"
+      },
+      {
+        "id": "23",
+        "Title": "Joker",
+        "Type": "Movies",
+        "Image": "../src/assets/joker.png",
+        "Description": "This is a joker movie",
+        "Country": "Italy",
+        "Year": "2016"
+      },
+      {
+        "id": "34",
+        "Title": "Death of long Dick",
+        "Type": "Movies",
+        "Image": "../src/assets/death.png",
+        "Description": "This is a joker movie",
+        "Country": "Italy",
+        "Year": "2016"
+      },
+      {
+        "id": "14",
+        "Title": "Hidden Life",
+        "Type": "Movies",
+        "Image": "../src/assets/thelastofus.jpeg",
+        "description": "This is a joker movie fanelo baloyi",
+        "country": "Italy",
+        "year": "2016"
+      },
+      {
+        "id": "35",
+        "Title": "John wick",
+        "Type": "Movies",
+        "Image": "../src/assets/johnwick.png",
+        "description": "This is a tluani movie",
+        "country": "Italy",
+        "year": "2016"
+      },
+      {
+        "id": "65",
+        "Title": "Once in hollywood",
+        "Type": "Movies",
+        "Image": "../src/assets/hollywood.png",
+        "description": "This is a hollywodd",
+        "country": "USA",
+        "year": "2013"
+      },
+      {
+        "id": "36",
+        "Title": "Queen and slim",
+        "Type": "Movies",
+        "Image": "../src/assets/queen.png",
+        "description": "This is a movie",
+        "country": "usa",
+        "year": "2010"
+      },
+      {
+        "id": "40",
+        "Title": "velvet",
+        "Type": "Movies",
+        "Image": "../src/assets/johnwick.png",
+        "description": "This is a tluani movie",
+        "country": "Italy",
+        "year": "2016"
+      },
+      {
+        "id": "69",
+        "Title": "one child",
+        "Type": "Movies",
+        "Image": "../src/assets/onechild.png",
+        "description": "This is a tluani movie",
+        "country": "Italy",
+        "year": "2016"
+      },
+      {
+        "id": "450",
+        "Title": "Uncut",
+        "Type": "Movies",
+        "Image": "../src/assets/uncut.png",
+        "description": "This is a tluani movie",
+        "country": "Italy",
+        "year": "2016"
+      },
+      {
+        "id": "46",
+        "Title": "Parasite",
+        "Type": "Movies",
+        "Image": "../src/assets/parasite.png",
+        "description": "This is a tluani movie",
+        "country": "Italy",
+        "year": "2016"
+      },
+      {
+        "id": "Transit",
+        "Title": "velvet",
+        "Type": "Movies",
+        "Image": "../src/assets/transit.png",
+        "description": "This is a tluani movie",
+        "country": "Italy",
+        "year": "2016"
+      }
+     
+      
+    ]
+    ,
+    "Series": [
+      
+        {
+          "id": "31",
+          "Title": "LOKI",
+          "Type": "Series",
+          "Image": "../src/assets/loki.jpeg",
+          "description": "This is a tluani movie",
+          "country": "Italy",
+          "year": "2016"
+        },
+        {
+          "id": "33",
+          "Title": "Squid game",
+          "Type": "Series",
+          "Image": "../src/assets/squidgame.png",
+          "description": "This is a tluani movie",
+          "country": "Italy",
+          "year": "2016"
+        },
+        {
+          "id": "21",
+          "Title": "US",
+          "Type": "Series",
+          "Image": "../src/assets/thelastofus.jpeg",
+          "description": "This is a tluani movie",
+          "country": "Italy",
+          "year": "2016"
+        },
+        {
+          "id": "12",
+          "Title": "Wedneday",
+          "Type": "Series",
+          "Image": "../src/assets/wednesday.jpeg",
+          "description": "This is a tluani movie",
+          "country": "Italy",
+          "year": "2016"
+        },
+        {
+          "id": "13",
+          "Title": "Rick and morty",
+          "Type": "Series",
+          "Image": "../src/assets/rickS.png",
+          "description": "This is a tluani movie",
+          "country": "Italy",
+          "year": "2016"
+        },
+        {
+          "id": "14",
+          "Title": "Stranger things",
+          "Type": "Series",
+          "Image": "../src/assets/stranger.png",
+          "description": "This is a tluani movie",
+          "country": "Italy",
+          "year": "2016"
+        }
+      
+    ]
+  }

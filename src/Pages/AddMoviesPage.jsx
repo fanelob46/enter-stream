@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRef,useState } from 'react'
+import { useState } from 'react'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,29 +10,28 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
    const [country, setCountry] = useState('');
    const [year, setYear] = useState('');
    const [file, setFile] = useState();
+   const [uploadImage,setUploadImage] = useState(null);
 
 
    const navigate = useNavigate()
 
-   const fileRef = useRef();
    const handleImageChange = (e) => {
     const file = e.target.files[0];
-
+   
     if(file) {
        const reader = new FileReader();
        reader.onloadend = () => {
+          setUploadImage(reader.result);
+          toast.success('Adding Successful');
+
           setImage(reader.result);
-
-
-          setImage(reader.result);
-
+           
        };
 
        reader.readAsDataURL(file);
-
+       
     }
  }
-   
 
    const submitForm = (e) => {
     e.preventDefault();
@@ -60,17 +59,21 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
       <div className=''>
         <form onSubmit={submitForm}>
         <div>
-        <div class="font-[sans-serif] max-w-md mx-auto">
-      <label class="text-base text-gray-500 font-semibold mb-2 block">Upload file</label>
-      <input type="file"
-        id='file'
-        class="w-full text-gray-400 font-semibold text-sm bg-white border file:cursor-pointer cursor-pointer file:border-0 file:py-3 file:px-4 file:mr-4 file:bg-gray-100 file:hover:bg-gray-200 file:text-gray-500 rounded"
-        ref={fileRef}
-        value={image}
-        onChange={handleImageChange} />
+        <a >
+       <input id='file-upload' type='file' accept='image/*' onChange={handleImageChange}>
         
-      <p class="text-xs text-gray-400 mt-2">PNG, JPG SVG, WEBP, and GIF are Allowed.</p>
-    </div>
+       </input>
+       <span className=''>Upload Image </span>
+       {
+         uploadImage && (
+            <img src={uploadImage}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>
+         
+            </img>
+         )
+       }
+       
+       
+    </a> 
         </div>
 
         { /*<div className='mb-4'>

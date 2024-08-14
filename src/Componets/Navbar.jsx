@@ -14,7 +14,7 @@ const Navbar = () => {
                     <Link to="/movies">MOVIES</Link>
                 </li>
                 <li>
-                    <Link to="#">SERIES</Link>
+                    <Link to="/series">SERIES</Link>
                 </li>
             </ul>
             
