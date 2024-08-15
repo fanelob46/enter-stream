@@ -69,13 +69,13 @@ function App() {
   };
 
   //update series
-  const updateSeries = async (movie) => {
-    const res = await fetch(`/api/Series/${movie.id}`, {
+  const updateSeries = async (series) => {
+    const res = await fetch(`/api/Series/${series.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(movie),
+      body: JSON.stringify(series),
     });
     return;
   };

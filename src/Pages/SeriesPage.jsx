@@ -46,7 +46,7 @@ const SeriesPage = ({deleteSeries}) => {
       
       <div className='flex'>
         <div className='pr-3'>
-        <Link to={`/edit-movie/${series.id}`}>
+        <Link to={`/edit-series/${series.id}`}>
       <button   className='text-white rounded-full bg-blue-500 pr-3 pl-3'>
         Edit
     </button>

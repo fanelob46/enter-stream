@@ -1,16 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
     <footer className='bg-gray-300 pb-3'>
         <nav className='flex items-center justify-between pr-7 pl-7 pt-7'>
-        <h2 className='text-black'><span >Enter-</span>Stream</h2>
+          <Link to='/'>
+          <h2 className='text-black'><span >Enter-</span>Stream</h2>
+
+          </Link>
         <ul className='flex text-black'>
-                <li className='pr-2 '>
-                    <a href="#">MOVIES</a>
+        <li className='pr-6 '>
+                    <Link to="/movies">MOVIES</Link>
                 </li>
-                <li>
-                    <a href="#">SERIES</a>
+                <li className='pl-6 '>
+                    <Link to="/series">SERIES</Link>
                 </li>
             </ul>
             

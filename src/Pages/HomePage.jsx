@@ -11,7 +11,7 @@ const HomePage = () => {
     <>
       <ListMovies isHome={true}/>
       <ViewAllMovies/> 
-      <ListSeries/>
+      <ListSeries isHome={true}/>
       <ViewAllSeries/>
       
       

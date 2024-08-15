@@ -10,10 +10,10 @@ const Navbar = () => {
 
       </Link>
         <ul className='flex text-white'>
-                <li className='pr-2 '>
+                <li className='pr-6 '>
                     <Link to="/movies">MOVIES</Link>
                 </li>
-                <li>
+                <li className='pl-6 '>
                     <Link to="/series">SERIES</Link>
                 </li>
             </ul>

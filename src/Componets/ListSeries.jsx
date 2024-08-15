@@ -14,7 +14,7 @@ const ListSeries = ({isHome = false}) => {
       const fetchSeries = async () => {
         const apiUrl = isHome ? 
         'http:/api/Series?_limit=8' 
-        : 'http:/api/Series'
+    : 'http:/api/Series'
         try {
         const res = await fetch(apiUrl);
         const data = await res.json();
