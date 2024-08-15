@@ -1,6 +1,9 @@
 import React from 'react'
 import ListMovies from '../Componets/ListMovies'
 import ViewAllMovies from '../Componets/ViewAllMovies'
+import ListSeries from '../Componets/ListSeries'
+import ViewAllSeries from '../Componets/ViewAllSeries'
+
 
 
 const HomePage = () => {
@@ -8,6 +11,9 @@ const HomePage = () => {
     <>
       <ListMovies isHome={true}/>
       <ViewAllMovies/> 
+      <ListSeries/>
+      <ViewAllSeries/>
+      
       
     </>
   )

@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 
 const Home = () => {
   return (
-    <div className='bg-home bg-center bg-cover w-[1280px] h-[355px]'>
+    <div className='bg-home bg-center bg-cover h-96 relative'>
        <Navbar/>
     </div>
   )

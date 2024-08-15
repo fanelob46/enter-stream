@@ -3,59 +3,56 @@ import { useState } from 'react'
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
-const AddMoviesPage = ({AddMovieSubmit}) => {
-
-   const [Image, setImage] = useState('');
-   const [Title, setTitle] = useState('');
-   const [Description, setDescription] = useState('');
-   const [Country, setCountry] = useState('');
-   const [Year, setYear] = useState('');
-   const [Type, setType] = useState('');
-   const [file, setFile] = useState();
-   const [uploadImage,setUploadImage] = useState(null);
-
-
-   const navigate = useNavigate()
-
-   const handleImageChange = (e) => {
-    const file = e.target.files[0];
-   
-    if(file) {
-       const reader = new FileReader();
-       reader.onloadend = () => {
-          setUploadImage(reader.result);
-          toast.success('Adding Successful');
-
-          setImage(reader.result);
-           
-       };
-
-       reader.readAsDataURL(file);
-       
-    }
- }
-
-   const submitForm = (e) => {
-    e.preventDefault();
-
-    const newMovie ={
-        Image,
-        Title,
-        Description,
-        Country,
-        Year,
-        Type
-    }
-
-    AddMovieSubmit(newMovie)
-
-    toast.success('Movie added succesfully');
-
-    return navigate('/movies')
-   }
-
-   
+const AddSeriesPage = ({AddSeriesSubmit}) => {
+    const [Image, setImage] = useState('');
+    const [Title, setTitle] = useState('');
+    const [Description, setDescription] = useState('');
+    const [Country, setCountry] = useState('');
+    const [Year, setYear] = useState('');
+    const [Type, setType] = useState('');
+    const [file, setFile] = useState();
+    const [uploadImage,setUploadImage] = useState(null);
+ 
+ 
+    const navigate = useNavigate()
+ 
+    const handleImageChange = (e) => {
+     const file = e.target.files[0];
     
+     if(file) {
+        const reader = new FileReader();
+        reader.onloadend = () => {
+           setUploadImage(reader.result);
+           toast.success('Adding Successful');
+ 
+           setImage(reader.result);
+            
+        };
+ 
+        reader.readAsDataURL(file);
+        
+     }
+  }
+ 
+    const submitForm = (e) => {
+     e.preventDefault();
+ 
+     const newSeries ={
+         Image,
+         Title,
+         Description,
+         Country,
+         Year,
+         Type
+     }
+ 
+     AddSeriesSubmit(newSeries);
+ 
+     toast.success('Series added succesfully');
+ 
+     return navigate('/series')
+    }
+
   return (
     <section className='bg-white'>
         
@@ -181,4 +178,4 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
   )
 }
 
-export default AddMoviesPage
+export default AddSeriesPage

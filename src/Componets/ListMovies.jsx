@@ -30,7 +30,7 @@ useEffect(()=> {
   
 
   return (
-    <div className='flex pt-5'>
+    <div className='flex justify-center pt-5'>
        {loading ? (
         <Spinner loading={loading }/>
        ) : (

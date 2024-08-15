@@ -1,13 +1,14 @@
 import React from 'react'
-import React from 'react'
 import { useState,useEffect } from 'react';
 import SeriesListing from './SeriesListing';
 import Spinner from './Spinner';
 
-const ListSeries = () => {
+const ListSeries = ({isHome = false}) => {
   
     const [series, setSeries] = useState([]);
     const [loading, setLoading] = useState(true);
+
+    
     
     useEffect(()=> {
       const fetchSeries = async () => {
@@ -32,7 +33,7 @@ const ListSeries = () => {
 
 
   return (
-    <div className='flex pt-5'>
+    <div className='flex justify-center pt-5'>
        {loading ? (
         <Spinner loading={loading }/>
        ) : (

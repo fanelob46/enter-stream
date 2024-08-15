@@ -7,24 +7,45 @@ const EditMoviePage = ({updateMovieSubmit}) => {
   const movie = useLoaderData();
   console.log(movie)
   
-  const [image, setImage] = useState(movie.Image);
-   const [description, setDescription] = useState(movie.Description);
-   const [country, setCountry] = useState(movie.Country);
-   const [year, setYear] = useState(movie.Year);
+  const [Image, setImage] = useState(movie.Image);
+  const [Title, setTitle] = useState(movie.Title);
+   const [Description, setDescription] = useState(movie.Description);
+   const [Country, setCountry] = useState(movie.Country);
+   const [Year, setYear] = useState(movie.Year);
+   const [Type, setType] = useState(movie.Type);
+   const [uploadImage,setUploadImage] = useState(null);
   
 
   const navigate = useNavigate();
   const { id } = useParams();
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+   
+    if(file) {
+       const reader = new FileReader();
+       reader.onloadend = () => {
+          setUploadImage(reader.result);
+          toast.success('Adding Successful');
+
+          setImage(reader.result);
+           
+       };
+
+       reader.readAsDataURL(file);
+       
+    }
+ }
 
   const submitForm = (e) => {
     e.preventDefault();
 
     const updatedMovie = {
       id,
-      image,
-      description,
-      country,
-      year,
+      Image,
+      Description,
+      Country,
+      Year,
       
     };
 
@@ -45,24 +66,40 @@ const EditMoviePage = ({updateMovieSubmit}) => {
       <div className=''>
         <form onSubmit={submitForm}>
         <div>
+        <a >
+       <input id='file-upload' type='file' accept='image/*' onChange={handleImageChange}>
+        
+       </input>
+       <span className=''>Upload Image </span>
+       {
+         uploadImage && (
+            <img src={uploadImage}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>
+         
+            </img>
+         )
+       }
        
+       
+    </a> 
         </div>
 
-        { /*<div className='mb-4'>
+        <div className='mb-4'>
             <label className='block text-gray-700 font-bold mb-2'>
               Movies/Series name
             </label>
             <input
               type='text'
-              id='location'
-              name='location'
+              id='Title'
+              name='Title'
               className='border rounded w-full py-2 px-3 mb-2'
               placeholder='Movie/Series name'
               required
+              value={Title}
+              onChange={(e) => setTitle(e.target.value)}
               
             />
-          </div>*/}
-
+          </div>
+           
          
           <div className='mb-4'>
             <label
@@ -77,7 +114,7 @@ const EditMoviePage = ({updateMovieSubmit}) => {
               className='border rounded w-full py-2 px-3'
               rows='4'
               placeholder='Movies/Series Description'
-              value={description}
+              value={Description}
               onChange={(e) => setDescription(e.target.value)}
             ></textarea>
           </div>
@@ -93,7 +130,7 @@ const EditMoviePage = ({updateMovieSubmit}) => {
               className='border rounded w-full py-2 px-3 mb-2'
               placeholder='Select country'
               required
-              value={country}
+              value={Country}
               onChange={(e) => setCountry(e.target.value)}
             />
           </div>
@@ -109,7 +146,7 @@ const EditMoviePage = ({updateMovieSubmit}) => {
               className='border rounded w-full py-2 px-3 mb-2'
               placeholder='2024/08/01'
               required
-              value={year}
+              value={Year}
               onChange={(e) => setYear(e.target.value)}
             />
           </div>

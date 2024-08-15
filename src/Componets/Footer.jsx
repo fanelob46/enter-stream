@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='bg-slate-800'>
+    <footer className='bg-gray-300 pb-3'>
         <nav className='flex items-center justify-between pr-7 pl-7 pt-7'>
-        <h2 className='text-white'><span className='text-blue-400'>Enter-</span>Stream</h2>
-        <ul className='flex text-white'>
+        <h2 className='text-black'><span >Enter-</span>Stream</h2>
+        <ul className='flex text-black'>
                 <li className='pr-2 '>
                     <a href="#">MOVIES</a>
                 </li>
@@ -16,7 +16,7 @@ const Footer = () => {
             
 
             
-            <button className='text-white rounded-full bg-blue-400 pr-3 pl-3' >SUBCRIBE</button>
+            <button className='text-black   pr-3 pl-3' >SUBCRIBE</button>
 
             
     </nav>
