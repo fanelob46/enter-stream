@@ -12,7 +12,7 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
    const [Year, setYear] = useState('');
    const [Type, setType] = useState('');
    const [file, setFile] = useState();
-   const [uploadImage,setUploadImage] = useState(null);
+   const [upload,setUpload] = useState(null);
 
 
    const navigate = useNavigate()
@@ -23,9 +23,8 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
     if(file) {
        const reader = new FileReader();
        reader.onloadend = () => {
-          setUploadImage(reader.result);
-          toast.success('Adding Successful');
-
+          setUpload(reader.result);
+          
           setImage(reader.result);
            
        };
@@ -69,8 +68,8 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
        </input>
        <span className=''>Upload Image </span>
        {
-         uploadImage && (
-            <img src={uploadImage}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>
+         upload && (
+            <img src={upload}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>
          
             </img>
          )
