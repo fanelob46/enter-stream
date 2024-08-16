@@ -36,7 +36,7 @@ useEffect(()=> {
        ) : (
         <>
          <div className='flex flex-col items-center'>
-         <h1 className='pt-14 text-lg text-center'>LATEST MOVIES</h1>
+         
          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 py-8 justify-items-center'>
          {movies.map((movie) => (
             <MovieListing key={movie.id} movie={movie}/>

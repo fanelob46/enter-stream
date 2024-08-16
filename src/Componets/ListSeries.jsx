@@ -40,7 +40,7 @@ const ListSeries = ({isHome = false}) => {
        ) : (
         <>
          <div className='flex flex-col items-center'>
-         <h1 className='pt-14 text-lg text-center'>LATEST SERIES</h1>
+         
          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 py-8 justify-items-center'>
          {series.map((series) => (
             <SeriesListing key={series.id} series={series}/>

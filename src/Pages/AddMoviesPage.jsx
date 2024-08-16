@@ -57,6 +57,8 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
     
   return (
     <section className='bg-white'>
+                  <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>Add a movie</h1>
+
         
     <div className=' m-auto max-w-2xl py-24'>
       <div className=''>
@@ -66,7 +68,7 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
        <input id='file-upload' type='file' accept='image/*' onChange={handleImageChange}>
         
        </input>
-       <span className=''> </span>
+       
        {
          upload && (
             <img src={upload}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>

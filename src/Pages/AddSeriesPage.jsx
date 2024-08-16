@@ -11,7 +11,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
     const [Year, setYear] = useState('');
     const [Type, setType] = useState('');
     const [file, setFile] = useState();
-    const [uploadImage,setUploadImage] = useState(null);
+    const [upload,setUploadImage] = useState(null);
  
  
     const navigate = useNavigate()
@@ -55,19 +55,20 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
 
   return (
     <section className='bg-white'>
-        
-    <div className=' m-auto max-w-2xl py-24'>
+                    <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>Add a Series</h1>
+
+                    <div className=' m-auto max-w-2xl py-24'>
       <div className=''>
-        <form onSubmit={submitForm}>
-        <div>
+        <form className='flex' onSubmit={submitForm}>
+        <div className='pr-9  '>
         <a >
        <input id='file-upload' type='file' accept='image/*' onChange={handleImageChange}>
         
        </input>
-       <span className=''>Upload Image </span>
+       
        {
-         uploadImage && (
-            <img src={uploadImage}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>
+         upload && (
+            <img src={upload}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>
          
             </img>
          )
@@ -76,7 +77,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
        
     </a> 
         </div>
-
+        <div className='w-64'>
         <div className='mb-4'>
             <label className='block text-gray-700 font-bold mb-2'>
               Movies/Series name
@@ -138,7 +139,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
               id='year'
               name='year'
               className='border rounded w-full py-2 px-3 mb-2'
-              placeholder='2024/08/01'
+              placeholder='year released'
               required
               value={Year}
               onChange={(e) => setYear(e.target.value)}
@@ -146,19 +147,37 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
           </div>
        
 
-         { /*<div class="flex">
+         <div class="flex">
           <div class="flex items-center me-4">
-        <input checked id="inline-checked-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+        <input
+        
+        
+        
+        className='border rounded w-full py-2 px-3 mb-2'
+        placeholder=''
+        required
+        value={Type}
+        onChange={(e) => setType(e.target.value)}
+        
+        checked id="inline-checked-radio" type="radio" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+        
+        />
         <label for="inline-checked-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Movie</label>
     </div>
     <div class="flex items-center me-4">
-        <input id="inline-radio" type="radio" value="" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+        <input
+        className='border rounded w-full py-2 px-3 mb-2'
+        placeholder='2024'
+        required
+        value={Type}
+        onChange={(e) => setType(e.target.value)}
+        id="inline-radio" type="radio"  name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
         <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Series</label>
     </div>
     
    
     
-</div>*/}
+</div>
 
     
 
@@ -171,6 +190,9 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
               SAVE
             </button>
           </div>
+        </div>
+
+        
         </form>
       </div>
     </div>

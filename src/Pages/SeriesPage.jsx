@@ -24,6 +24,8 @@ const SeriesPage = ({deleteSeries}) => {
 
   return (
     <>
+                <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>{series.Title}</h1>
+
     <div className='flex justify-center pt-12 pb-12 pl-6'>
       <div>
       <img src={series.Image} className='w-[500px] h-[500px]'/>

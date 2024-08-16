@@ -60,7 +60,8 @@ const EditSeriesPage = ({updateSeriesSubmit}) => {
   
   return (
     <section className='bg-white'>
-        
+                    <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>Edit a series</h1>
+
     <div className=' m-auto max-w-2xl py-24'>
       <div className=''>
         <form onSubmit={submitForm}>
