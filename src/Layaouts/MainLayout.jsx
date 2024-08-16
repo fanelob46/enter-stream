@@ -7,13 +7,13 @@ import Footer from '../Componets/Footer'
 
 const MainLayout = () => {
   return (
-    <>
+    <div className=''>
     <Home/>
      <Outlet/>
      <ToastContainer/>
      <Footer/>
      
-    </>
+    </div>
   )
 }
 

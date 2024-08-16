@@ -33,6 +33,7 @@ const ListSeries = ({isHome = false}) => {
 
 
   return (
+    <>
     <div className='flex justify-center pt-5'>
        {loading ? (
         <Spinner loading={loading }/>
@@ -51,6 +52,7 @@ const ListSeries = ({isHome = false}) => {
         
 
     </div>
+    </>
   )
 }
 

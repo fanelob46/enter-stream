@@ -5,7 +5,8 @@ import ListMovies from '../Componets/ListMovies'
 const MoviesPage = () => {
   return (
     <>
-    
+            <h1 className=' fixed bottom-[70%] left-0 w-full text-center bg-white h-0'>Latest Movies</h1>
+
 <section>
   <div className='flex justify-end pt-4 pr-4'>
   <Link  to='/Add-movie' className=' text-white rounded-full bg-blue-400 pr-3 pl-3 pt-1 pb-1'>
