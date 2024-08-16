@@ -74,7 +74,7 @@ const EditMoviePage = ({updateMovieSubmit}) => {
        
        {
          upload && (
-            <img src={upload}  alt='Upload Movie Poster' className='w-80 h-96 object-cover text-center bg-gray-400'>
+            <img src={upload}  alt='Upload Movie Poster' className='w-80 h-[500px] object-cover text-center bg-gray-400'>
          
             </img>
          )
