@@ -36,13 +36,13 @@ export const Moviepage = ({deleteMovie}) => {
         <div className='pb-7' >
         <h1 className='font-bold text-3xl'><bold>{movie.Title}</bold></h1>
         </div>
-        <div className='pb-9'>
-        <p>{movie.Description}</p>
+        <div className='pb-5  h-24 w-72'>
+        <p className='text-sm'>{movie.Description}</p>
         </div>
       <div className='pb-8'> 
-      <h5><bold>Country:</bold>{movie.Country}</h5>
-      <h5><bold>Year:</bold>{movie.Year}</h5>
-      <h5><bold>Type:</bold>{movie.Type}</h5>
+      <h5><strong>Country:</strong>{movie.Country}</h5>
+      <h5><strong>Year:</strong>{movie.Year}</h5>
+      <h5><strong>Type:</strong>{movie.Type}</h5>
 
       </div>
       

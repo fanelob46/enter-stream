@@ -77,7 +77,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
        
     </a> 
         </div>
-        <div className='w-64'>
+        <div className='w-80'>
         <div className='mb-4'>
             <label className='block text-gray-700 font-bold mb-2'>
               Movies/Series name
@@ -147,7 +147,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
           </div>
        
 
-         <div class="flex">
+         <div class="flex pb-6">
           <div class="flex items-center me-4">
         <input
         
@@ -159,7 +159,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
         value={Type}
         onChange={(e) => setType(e.target.value)}
         
-        checked id="inline-checked-radio" type="radio" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+         id="inline-checked-radio" type="radio" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
         
         />
         <label for="inline-checked-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Movie</label>
@@ -171,7 +171,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
         required
         value={Type}
         onChange={(e) => setType(e.target.value)}
-        id="inline-radio" type="radio"  name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+        checked id="inline-radio" type="radio"  name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
         <label for="inline-radio" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Series</label>
     </div>
     

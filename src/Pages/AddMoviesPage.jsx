@@ -80,7 +80,7 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
        
     </a> 
         </div>
-        <div className='w-64'>
+        <div className='w-80'>
         <div className='mb-4'>
             <label className='block text-gray-700 font-bold mb-2'>
               Movies/Series name
@@ -150,7 +150,7 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
           </div>
        
 
-         <div class="flex">
+         <div class="flex pb-6">
           <div class="flex items-center me-4">
         <input
         
