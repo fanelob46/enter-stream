@@ -40,9 +40,18 @@ const SeriesPage = ({deleteSeries}) => {
         <p className='text-sm'>{series.Description}</p>
         </div>
       <div className='pb-8'> 
-      <h5><strong>Country:</strong>{series.Country}</h5>
-      <h5><strong>Year:</strong>{series.Year}</h5>
-      <h5><strong>Type:</strong>{series.Type}</h5>
+        <div className='flex'>
+        <h5><strong>Country:</strong></h5>
+         <p className='pl-2'>{series.Country}</p>
+        </div>
+        <div className='flex'>
+        <h5><strong>Year:</strong></h5>
+        <p className='pl-2'>{series.Year}</p>
+        </div>
+        <div className='flex'>
+        <h5><strong>Type:</strong></h5>
+         <p className='pl-2'>{series.Type}</p>
+        </div>
 
       </div>
       

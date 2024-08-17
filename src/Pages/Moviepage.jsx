@@ -39,11 +39,20 @@ export const Moviepage = ({deleteMovie}) => {
         <div className='pb-5  h-24 w-72'>
         <p className='text-sm'>{movie.Description}</p>
         </div>
-      <div className='pb-8'> 
-      <h5><strong>Country:</strong>{movie.Country}</h5>
-      <h5><strong>Year:</strong>{movie.Year}</h5>
-      <h5><strong>Type:</strong>{movie.Type}</h5>
+      <div className='pb-8 pt-6'> 
+        <div className='flex'>
+        <h5><strong>Country:</strong></h5>
+        <p className='pl-2'>{movie.Country} </p>
+        </div>
+      <div className='flex'>
+      <h5><strong>Year:</strong></h5>
+      <p className='pl-2'>{movie.Year}</p>
+      </div>
+      <div className='flex'>
+      <h5><strong>Type:</strong></h5>
+      <p className='pl-2'>{movie.Type}</p>
 
+      </div>
       </div>
       
       <div className='flex'>
