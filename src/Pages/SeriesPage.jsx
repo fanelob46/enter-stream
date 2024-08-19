@@ -24,7 +24,7 @@ const SeriesPage = ({deleteSeries}) => {
 
   return (
     <>
-                <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>{series.Title}</h1>
+                <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white uppercase'>{series.Title}</h1>
 
     <div className='flex justify-center pt-12 pb-12 pl-6'>
       <div>
@@ -34,7 +34,7 @@ const SeriesPage = ({deleteSeries}) => {
 
       <div className='pl-9'>
         <div className='pb-7' >
-        <h1 className='font-bold text-3xl'><bold>{series.Title}</bold></h1>
+        <h1 className='font-bold text-5xl'><bold>{series.Title}</bold></h1>
         </div>
         <div className='pb-7  h-26 w-72  '>
         <p className='text-sm'>{series.Description}</p>

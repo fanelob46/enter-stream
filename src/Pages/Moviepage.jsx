@@ -25,7 +25,7 @@ export const Moviepage = ({deleteMovie}) => {
   return (
     
     <>
-        <h1 className=' absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>{movie.Title}</h1>
+        <h1 className=' absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white uppercase'>{movie.Title}</h1>
        <div className='flex justify-center pt-12 pb-12 pl-6'>
       <div>
       <img src={movie.Image} className='w-[500px] h-[500px]'/>
@@ -34,7 +34,7 @@ export const Moviepage = ({deleteMovie}) => {
 
       <div className='pl-9'>
         <div className='pb-7' >
-        <h1 className='font-bold text-3xl'><bold>{movie.Title}</bold></h1>
+        <h1 className='font-bold text-5xl'><bold>{movie.Title}</bold></h1>
         </div>
         <div className='pb-5  h-24 w-72'>
         <p className='text-sm'>{movie.Description}</p>

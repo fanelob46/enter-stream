@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const SeriesesPage = () => {
   return (
     <>
-        <h1 className=' absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>Latest Series</h1>
+        <h1 className=' absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>LATEST SERIES</h1>
 
     <section>
 
