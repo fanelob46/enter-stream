@@ -59,8 +59,8 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
 
                     <div className=' m-auto max-w-2xl py-24'>
       <div className=''>
-        <form className='flex' onSubmit={submitForm}>
-        <div className='pr-9  '>
+        <form className='grid grid-cols-1' onSubmit={submitForm}>
+        <div className='pr-9  pl-10 pb-3'>
         <a >
        <input id='file-upload' type='file' accept='image/*' onChange={handleImageChange}>
         
@@ -77,7 +77,7 @@ const AddSeriesPage = ({AddSeriesSubmit}) => {
        
     </a> 
         </div>
-        <div className='w-80'>
+        <div className='w-[250px] pl-10'>
         <div className='mb-4'>
             <label className='block text-gray-700 font-bold mb-2'>
               Movies/Series name

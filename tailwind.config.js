@@ -8,6 +8,10 @@ export default {
     extend: {
       backgroundImage: {
         'home': "url('../src/assets/hulu.png')",
+      },
+      screens:{
+        'kobus': '2012px',
+        'pc' : '1740px'
       }
     },
   },
