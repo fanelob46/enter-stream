@@ -26,20 +26,20 @@ const SeriesPage = ({deleteSeries}) => {
     <>
                 <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white uppercase'>{series.Title}</h1>
 
-    <div className='grid grid-cols-1 pt-12 pb-12 pl-6'>
+    <div className='grid grid-cols-1 md:flex md:justify-center place-items-center  pt-12 pb-12 pl-6'>
       <div>
-      <img src={series.Image} className='w-[280px] h-[400px]'/>
+      <img src={series.Image} className='w-[280px] h-[400px] lg:w-[400px] lg:h-[450px] xl:w-[450px] xl:h-[500px] pc:w-[600px] pc:h-[700px]'/>
 
       </div>
 
-      <div className='pl-9'>
-        <div className='pb-7' >
-        <h1 className='font-bold text-5xl'><bold>{series.Title}</bold></h1>
+      <div className='pl-9 md:pt-0'>
+        <div className='pb-7 ' >
+        <h1 className='font-bold text-5xl pt-3 pc:text-7xl kobus:text-8xl'><bold>{series.Title}</bold></h1>
         </div>
         <div className='pb-7  h-26 w-72  '>
-        <p className='text-sm w-[200px]'>{series.Description}</p>
+        <p className='text-sm w-[200px] lg:text-lg xl:text-3xl xl:w-[500px] kobus:text-4xl'>{series.Description}</p>
         </div>
-      <div className='pb-8'> 
+      <div className='pb-8 pc:text-3xl xl:text-3xl kobus:text-4xl'> 
         <div className='flex'>
         <h5><strong>Country:</strong></h5>
          <p className='pl-2'>{series.Country}</p>
@@ -58,13 +58,13 @@ const SeriesPage = ({deleteSeries}) => {
       <div className='flex'>
         <div className='pr-3'>
         <Link to={`/edit-series/${series.id}`}>
-      <button   className='text-white rounded-full bg-blue-500 pr-3 pl-3'>
+      <button   className='text-white rounded-full bg-blue-500 pr-3 pl-3 pc:py-5 pc:px-10 xl:py-6 xl:px-8'>
         Edit
     </button>
       </Link>
         </div>
       <div>
-      <button onClick={() => onDeleteClick(series.id)}  className='text-white rounded-full bg-blue-400 pr-3 pl-3'>
+      <button onClick={() => onDeleteClick(series.id)}  className='text-white rounded-full bg-blue-400 pr-3 pl-3 pc:py-5 pc:px-10 xl:py-6 xl:px-8'>
         Delete
     </button>
       </div>

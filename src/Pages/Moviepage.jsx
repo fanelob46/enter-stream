@@ -26,20 +26,20 @@ export const Moviepage = ({deleteMovie}) => {
     
     <>
         <h1 className=' absolute bottom-[70%]  w-full text-center bg-white h-0 text-3xl text-white uppercase'>{movie.Title}</h1>
-       <div className='grid grid-cols-1 pt-12 pb-12 pl-6'>
-      <div>
-      <img src={movie.Image} className='c'/>
+       <div className='grid grid-cols-1 pt-12 pb-12 pl-6 sm:place-items-center md:flex xl:justify-center'>
+      <div className='flex justify-center pr-4'>
+      <img src={movie.Image} className=' sm:size-72 md:h-[500px] md:w-[400px] kobus:w-[600px] kobus:h-[800px]'/>
 
       </div>
 
-      <div className='pl-9'>
-        <div className='py-7' >
-        <h1 className='font-bold text-3xl'><bold>{movie.Title}</bold></h1>
+      <div className='pl-9  lg:pt-0'>
+        <div className='py-7 ' >
+        <h1 className='font-bold text-3xl lg:text-5xl kobus:text-7xl'><bold>{movie.Title}</bold></h1>
         </div>
         <div className='pb-5  '>
-        <p className='text-sm w-[200px]'>{movie.Description}</p>
+        <p className='text-sm w-[200px] lg:w-[400px] lg:text-2xl kobus:text-5xl kobus:w-[600px]'>{movie.Description}</p>
         </div>
-      <div className='pb-8 pt-6'> 
+      <div className='pb-8 pt-6 lg:text-2xl kobus:text-4xl'> 
         <div className='flex'>
         <h5><strong>Country:</strong></h5>
         <p className='pl-2'>{movie.Country} </p>
@@ -58,13 +58,13 @@ export const Moviepage = ({deleteMovie}) => {
       <div className='flex'>
         <div className='pr-3'>
         <Link to={`/edit-movie/${movie.id}`}>
-      <button   className='text-white rounded-full bg-blue-500 pr-3 pl-3'>
+      <button   className='text-white rounded-full bg-blue-500 pr-3 pl-3 lg:py-3 lg:px-5 kobus:py-7 kobus:px-10'>
         Edit
     </button>
       </Link>
         </div>
       <div>
-      <button onClick={() => onDeleteClick(movie.id)}  className='text-white rounded-full bg-blue-400 pr-3 pl-3'>
+      <button onClick={() => onDeleteClick(movie.id)}  className='text-white rounded-full bg-blue-400 pr-3 pl-3 lg:py-3 lg:px-5 kobus:py-7 kobus:px-10'>
         Delete
     </button>
       </div>
