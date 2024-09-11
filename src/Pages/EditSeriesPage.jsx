@@ -59,13 +59,13 @@ const EditSeriesPage = ({updateSeriesSubmit}) => {
     };
   
   return (
-    <section className='bg-white'>
-    <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>Edit a Series</h1>
+    <section className='bg-white big:py-[300px]'>
+    <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white big:bottom-[80%] big:text-6xl'>Edit a Series</h1>
 
-    <div className=' m-auto max-w-2xl py-24'>
+    <div className=' m-auto max-w-2xl py-24  '>
 <div className=''>
-<form className='grid grid-cols-1 md:flex' onSubmit={submitForm}>
-<div className='pr-9  '>
+<form className='grid grid-cols-1 sm:flex md:flex md:justify-center kobus:justify-center pc:justify-center lg:justify-center   big:justify-center' onSubmit={submitForm}>
+<div className='pr-9   big:text-4xl '>
 <a >
 <input id='file-upload' type='file' accept='image/*' onChange={handleImageChange}>
 
@@ -82,7 +82,7 @@ upload && (
 
 </a> 
 </div>
-<div className='w-[250px] pl-10 md:w-[350px] lg:w-[550px] xl:w-[700px] kobus:text-2xl'>
+<div className='w-[250px] pl-10 md:w-[350px] lg:w-[550px] xl:w-[700px] kobus:text-2xl big:text-5xl'>
 <div className='mb-4'>
 <label className='block text-gray-700 font-bold mb-2'>
 Movies/Series name

@@ -25,21 +25,21 @@ export const Moviepage = ({deleteMovie}) => {
   return (
     
     <>
-        <h1 className=' absolute bottom-[70%]  w-full text-center bg-white h-0 text-3xl text-white uppercase'>{movie.Title}</h1>
-       <div className='grid grid-cols-1 pt-12 pb-12 pl-6 sm:place-items-center md:flex xl:justify-center'>
+        <h1 className=' absolute bottom-[70%]  w-full text-center bg-white h-0 text-3xl text-white uppercase  big:bottom-[80%] big:text-7xl'>{movie.Title}</h1>
+       <div className='grid grid-cols-1 pt-12 pb-12 pl-6 sm:place-items-center md:flex xl:justify-center big:py-[300px]'>
       <div className='flex justify-center pr-4'>
-      <img src={movie.Image} className=' sm:size-72 md:h-[500px] md:w-[400px] kobus:w-[600px] kobus:h-[800px]'/>
+      <img src={movie.Image} className=' sm:size-72 md:h-[500px] md:w-[400px] kobus:w-[600px] kobus:h-[800px] big:w-[800px] big:h-[1000px]'/>
 
       </div>
 
       <div className='pl-9  lg:pt-0'>
         <div className='py-7 ' >
-        <h1 className='font-bold text-3xl lg:text-5xl kobus:text-7xl'><bold>{movie.Title}</bold></h1>
+        <h1 className='font-bold text-3xl lg:text-5xl kobus:text-7xl big:text-9xl'><bold>{movie.Title}</bold></h1>
         </div>
         <div className='pb-5  '>
-        <p className='text-sm w-[200px] lg:w-[400px] lg:text-2xl kobus:text-5xl kobus:w-[600px]'>{movie.Description}</p>
+        <p className='text-sm w-[200px] text-justify tracking-tighter  lg:w-[400px] lg:text-2xl kobus:text-5xl kobus:w-[700px] big:text-6xl big:w-[700px]'>{movie.Description}</p>
         </div>
-      <div className='pb-8 pt-6 lg:text-2xl kobus:text-4xl'> 
+      <div className='pb-8 pt-6 lg:text-2xl kobus:text-4xl big:text-5xl'> 
         <div className='flex'>
         <h5><strong>Country:</strong></h5>
         <p className='pl-2'>{movie.Country} </p>

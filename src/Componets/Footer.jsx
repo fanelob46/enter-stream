@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className='bg-gray-300 pb-3'>
-        <nav className='flex items-center justify-between pr-7 pl-7 pt-7 text-sm'>
+        <nav className='flex items-center justify-between pr-7 pl-7 pt-7 text-sm big:text-4xl'>
           <Link to='/'>
           <h2 className='text-black pr-5'><span >Enter-</span>Stream</h2>
 

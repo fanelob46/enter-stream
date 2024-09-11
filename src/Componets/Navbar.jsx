@@ -9,7 +9,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='flex items-center justify-between p-5 '>
+    <nav className='flex items-center justify-between p-5 big:text-4xl'>
       <Link to='/'>
         <h2 className='text-white'><span className='text-blue-400'>Enter-</span>Stream</h2>
       </Link>

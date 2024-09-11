@@ -56,13 +56,13 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
    
     
   return (
-    <section className='bg-white'>
-                    <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white'>Add a Movie</h1>
+    <section className='bg-white big:py-[300px]'>
+                    <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white big:bottom-[80%] big:text-6xl'>Add a Movie</h1>
 
                     <div className=' m-auto max-w-2xl py-24'>
       <div className=''>
-        <form className='grid grid-cols-1 md:flex' onSubmit={submitForm}>
-        <div className='pr-9  pl-10 pb-3'>
+        <form className='grid grid-cols-1 sm:flex md:flex kobus:justify-center sm:justify-center pc:justify-center big:justify-center' onSubmit={submitForm}>
+        <div className='pr-9  pl-10 pb-3 big:text-4xl'>
         <a >
        <input id='file-upload' type='file' accept='image/*' onChange={handleImageChange}>
         
@@ -79,7 +79,7 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
        
     </a> 
         </div>
-        <div className='w-[250px] pl-10 md:w-[350px] lg:w-[550px] xl:w-[700px] kobus:text-2xl'>
+        <div className='w-[250px] pl-10 md:w-[350px] lg:w-[550px] xl:w-[700px] kobus:text-2xl big:text-5xl'>
         <div className='mb-4 '>
             <label className='block text-gray-700 font-bold mb-2 '>
               Movies/Series name
@@ -88,7 +88,7 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
               type='text'
               id='Title'
               name='Title'
-              className='border rounded w-full py-2 px-3 mb-2 xl:w-[500px] kobus:w-[700px]'
+              className='border rounded w-full py-2 px-3 mb-2 xl:w-[500px] kobus:w-[700px] '
               placeholder='Movie/Series name'
               required
               value={Title}
@@ -148,38 +148,32 @@ const AddMoviesPage = ({AddMovieSubmit}) => {
             />
           </div>
        
-
-         <div class="flex pb-6">
-          <div class="flex items-center me-4 ">
-        <input
-        
-        
-        
-        className='border rounded w-full py-2 px-3 mb-2 '
-        placeholder=''
-        required
-        value={Type}
+          <div className="flex pb-6 l">
+    <div className="flex items-center me-4 ">
+      <input
+        id="movie-radio"
+        type="radio"
+        name="type"
+        value="Movie"
+        checked={Type === 'Movie'}
         onChange={(e) => setType(e.target.value)}
-        
-        checked id="inline-checked-radio" type="radio" name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-        
-        />
-        <label for="inline-checked-radio" className="ms-2 text-sm font-medium text-black  kobus:text-3xl">Movie</label>
+        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+      />
+      <label htmlFor="movie-radio" className="ms-2 text-sm font-medium text-black kobus:text-3xl big:text-5xl">Movie</label>
     </div>
-    <div class="flex items-center me-4">
-        <input
-        className='border rounded w-full py-2 px-3 mb-2'
-        placeholder='2024'
-        required
-        value={Type}
+    <div className="flex items-center me-4">
+      <input
+        id="series-radio"
+        type="radio"
+        name="type"
+        value="Series"
+        checked={Type === 'Series'}
         onChange={(e) => setType(e.target.value)}
-         id="inline-radio" type="radio"  name="inline-radio-group" class="w-4 h-4 text-blue-600 bg-black border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-        <label for="inline-radio" className="ms-2 text-sm font-medium text-black  kobus:text-3xl">Series</label>
+        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+      />
+      <label htmlFor="series-radio" className="ms-2 text-sm font-medium text-black kobus:text-3xl big:text-5xl">Series</label>
     </div>
-    
-   
-    
-</div>
+  </div>
 
     
 

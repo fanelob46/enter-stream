@@ -24,22 +24,22 @@ const SeriesPage = ({deleteSeries}) => {
 
   return (
     <>
-                <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white uppercase'>{series.Title}</h1>
+                <h1 className='  absolute bottom-[70%]  w-full text-center bg-white h-0 text-4xl text-white uppercase big:bottom-[80%] big:text-7xl'>{series.Title}</h1>
 
-    <div className='grid grid-cols-1 md:flex md:justify-center place-items-center  pt-12 pb-12 pl-6'>
+    <div className='grid grid-cols-1 md:flex md:justify-center place-items-center  pt-12 pb-12 pl-6 big:py-[300px]'>
       <div>
-      <img src={series.Image} className='w-[280px] h-[400px] lg:w-[400px] lg:h-[450px] xl:w-[450px] xl:h-[500px] pc:w-[600px] pc:h-[700px]'/>
+      <img src={series.Image} className='w-[280px] h-[400px] lg:w-[400px] lg:h-[450px] xl:w-[450px] xl:h-[500px] pc:w-[600px] pc:h-[700px] big:w-[800px] big:h-[1000px]'/>
 
       </div>
 
       <div className='pl-9 md:pt-0'>
         <div className='pb-7 ' >
-        <h1 className='font-bold text-5xl pt-3 pc:text-7xl kobus:text-8xl'><bold>{series.Title}</bold></h1>
+        <h1 className='font-bold text-5xl pt-3 pc:text-7xl kobus:text-8xl kobus:pt-0 big:text-9xl'><bold>{series.Title}</bold></h1>
         </div>
         <div className='pb-7  h-26 w-72  '>
-        <p className='text-sm w-[200px] lg:text-lg xl:text-3xl xl:w-[500px] kobus:text-4xl'>{series.Description}</p>
+        <p className='text-sm w-[200px] text-justify tracking-tight lg:text-lg lg:w-[300px] xl:text-3xl xl:w-[500px] kobus:text-4xl kobus:w-[600px] big:text-6xl big:w-[700px]'>{series.Description}</p>
         </div>
-      <div className='pb-8 pc:text-3xl xl:text-3xl kobus:text-4xl'> 
+      <div className='pb-8 pc:text-3xl xl:text-3xl kobus:text-4xl big:text-5xl'> 
         <div className='flex'>
         <h5><strong>Country:</strong></h5>
          <p className='pl-2'>{series.Country}</p>

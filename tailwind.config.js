@@ -10,6 +10,7 @@ export default {
         'home': "url('../src/assets/hulu.png')",
       },
       screens:{
+        'big':'2560px',
         'kobus': '2012px',
         'pc' : '1740px'
       }
